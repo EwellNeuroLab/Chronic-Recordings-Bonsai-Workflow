@@ -5,5 +5,8 @@ Bonsai workflows for video-LFP recordings with webcamera and OpenEphys acquisiti
 * ChronicVideoLFPRecordings: same as the previous, but data is saved in every hour (set in Timer node). Suitable for chronic monitoring.
 * ChronicVideoLFPRecordings2Camera: same as the previous, but video is recorded on the camera simultaneously. Output is a singe video where each frame is divided into two halves - one half belongs to one camera, the other half is to the other camera.
 
-Dependencies. Packages can be downloaded in Tools ->  
+Dependencies. Packages can be downloaded in Tools -> Manage Packages
 * Ephys
+* Vision
+* Video
+* Dsp Design
