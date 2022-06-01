@@ -34,6 +34,27 @@ Example for final file names with Timestamp suffix:
 'vid2022-02-16T13_02_17.avi'
 
 ## Bonsai property settings
-
+Bonsai nodes are parametrized by setting their properties in the Property panel. Many of the settings are fixed and do not require to be changed, but some of them requires modifications by the user. First, settings that requires the user's attention are listed. 
+**_VideoCaptureDevice_**
+*Set this when more than one camera is connected to the computer.* Cameras will be listed here and user have to select the one to use for video acquisition.
 ![image](https://user-images.githubusercontent.com/94412124/171449218-e4c107af-69fc-49d3-8633-6a989563b79f.png)
+
+**_Rhd2000EvalBoard_**
+1) Go to the BitFileName field and click on the (...). Next, a file browser pops up. Select the bit file you've downloaded. (In this example we used the rhd2000_usb3.bit renamed to main.bit).
+2) Set sampling frequency in the SampleRate field.
+![image](https://user-images.githubusercontent.com/94412124/171454894-93697513-9513-4da6-b3c3-2d95dce306df.png)
+
+
+*Extracting voltage and timestamp data from RHD2000EvalBoard node*
+Right click on the RHD2000EvalBoard node. Select the first item in the list - Output. A list of data fields appears. Click on the AmplifierData/Timestamp to create nodes for the voltage/timestamp data.
+![image](https://user-images.githubusercontent.com/94412124/171456707-badb6d05-7cf7-405e-8538-f2971eeee5d8.png)
+
+
+*Disabling auto-exposure* ()
+Go to the Property Panel of VideoCaptureDevice Click on the (...) in the CaptureProperties | (Collection) field. The following window pops-up. 
+![image](https://user-images.githubusercontent.com/94412124/171451871-9f3b1e03-8a66-40bb-a838-ec3008bb2b4b.png)
+Exposure variable can be added by clicking on the Add button. Setting the ControlFlags to Manual and Value to -5 disables auto-exposure, maintaining a constan frame acqusition rate.
+
+
+
 
