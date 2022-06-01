@@ -38,6 +38,7 @@ Bonsai nodes are parametrized by setting their properties in the Property panel.
 
 **_VideoCaptureDevice_**
 *Set this when more than one camera is connected to the computer.* Cameras will be listed here and user have to select the one to use for video acquisition.
+
 ![image](https://user-images.githubusercontent.com/94412124/171449218-e4c107af-69fc-49d3-8633-6a989563b79f.png)
 
 **_Rhd2000EvalBoard_**
@@ -56,11 +57,11 @@ Right click on the RHD2000EvalBoard node. Select the first item in the list - Ou
 
 *Disabling auto-exposure* ()
 
-Go to the Property Panel of VideoCaptureDevice Click on the (...) in the CaptureProperties | (Collection) field. The following window pops-up.
+Go to the Property Panel of VideoCaptureDevice Click on the (...) in the CaptureProperties | (Collection) field. The following window pops-up.Exposure variable can be added by clicking on the Add button. Setting the ControlFlags to Manual and Value to -5 disables auto-exposure, maintaining a constan frame acqusition rate.
 
 ![image](https://user-images.githubusercontent.com/94412124/171451871-9f3b1e03-8a66-40bb-a838-ec3008bb2b4b.png)
 
-Exposure variable can be added by clicking on the Add button. Setting the ControlFlags to Manual and Value to -5 disables auto-exposure, maintaining a constan frame acqusition rate.
+
 
 
 
