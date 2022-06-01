@@ -34,7 +34,7 @@ Example for final file names with Timestamp suffix:
 
 
 ## Bonsai property settings
-Bonsai nodes are parametrized by setting their properties in the Property panel. Many of the settings are fixed and do not require to be changed, but some of them requires modifications by the user. First, settings that requires the user's attention are listed. 
+Bonsai nodes are parametrized by setting their properties in the Property panel. Many of the settings are fixed and do not require to be changed, but some of them requires modifications by the user. First, settings that requires these nodes are listed. 
 
 **_VideoCaptureDevice_**
 *Set this when more than one camera is connected to the computer.* Cameras will be listed here and user have to select the one to use for video acquisition. In this example, we only had one camera connected (labelled with index 0).
