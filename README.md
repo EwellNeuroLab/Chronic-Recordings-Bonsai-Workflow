@@ -5,7 +5,7 @@ Bonsai workflows for video-LFP recordings with webcamera and OpenEphys acquisiti
 * ChronicVideoLFPRecordings: same as the previous, but data is saved in every hour (set in Timer node). Suitable for chronic monitoring.
 * ChronicVideoLFPRecordings2Camera: same as the previous, but video is recorded on two cameras simultaneously. Output is a single video where each frame is divided into two halves - one half belongs to one camera, the other half is to the other camera.
 
-## Dependencies. 
+## Dependencies 
 Bonsai Rx (https://bonsai-rx.org/)
 Packages can be downloaded in Tools -> Manage Packages
 * Ephys
@@ -16,7 +16,12 @@ An additional bit file must be provided to the OE acquisition node that is avail
 
 ## Channel selection
 
-## Output file naming.
+## Output file naming
 
-IMPORTANT ONLY when the Seizure Analysis GUI is used for data analysis. The GUI distinguishes different data types based on it's name. Therefore, timestamp file should be named as 'ts', voltage data as 'amplifier' and video as 'vid'. In the MatrixWriter/VideoWriter set the suffix to 'Timestamp'.
+IMPORTANT ONLY when the Seizure Analysis GUI is used for data analysis. The GUI distinguishes different data types based on it's name. Therefore, timestamp file should be named as 'ts', voltage data as 'amplifier' and video as 'vid'. In the MatrixWriter/VideoWriter set the suffix to 'Timestamp'. The timestamp will be used in the GUI to determine the recording date of the files.
+Tip: when the FileName is set for MatrixWriter/VideoWriter, make sure you add the extension after the name to get a usable file. In this case: 'ts.bin', 'amplifier.bin', 'vid.avi'. The timestamp is added automatically by Bonsai.
 
+Example for final file names with Timestamp suffix:
+'ts2022-02-16T13_02_17.bin'
+'amplifier2022-02-16T13_02_17.bin'
+'vid2022-02-16T13_02_17.avi'
