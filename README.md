@@ -12,7 +12,7 @@ Packages can be downloaded in Tools -> Manage Packages
 * Vision
 * Video
 * Dsp Design
-An additional bit file must be provided to the OE acquisition node that is available here: https://github.com/open-ephys/GUI/tree/master/Resources/Bitfiles. Then, location of the bit file must be specified within the RHD2000EvalBoard node's properties (see Bonsai Property Settings/RHD2000EvalBoardProperty.png for details).
+An additional bit file must be provided to the OE acquisition node that is available here: https://github.com/open-ephys/GUI/tree/master/Resources/Bitfiles. Then, location of the bit file must be specified within the RHD2000EvalBoard node's properties (see Bonsai property settings section).
 
 ## Channel selection
 When channels are selected in Bonsai, the channel numbers needs to be converted from the Open Ephys channel map. With a 16-channels adapter board the following channel numbers are available.
@@ -31,22 +31,44 @@ Tip: when the FileName is set for MatrixWriter/VideoWriter, make sure you add th
 Example for final file names with Timestamp suffix:
 'ts2022-02-16T13_02_17.bin'
 'amplifier2022-02-16T13_02_17.bin'
-'vid2022-02-16T13_02_17.avi'
+
 
 ## Bonsai property settings
 Bonsai nodes are parametrized by setting their properties in the Property panel. Many of the settings are fixed and do not require to be changed, but some of them requires modifications by the user. First, settings that requires the user's attention are listed. 
 
 **_VideoCaptureDevice_**
-*Set this when more than one camera is connected to the computer.* Cameras will be listed here and user have to select the one to use for video acquisition.
+*Set this when more than one camera is connected to the computer.* Cameras will be listed here and user have to select the one to use for video acquisition. In this example, we only had one camera connected (labelled with index 0).
 
 ![image](https://user-images.githubusercontent.com/94412124/171449218-e4c107af-69fc-49d3-8633-6a989563b79f.png)
 
 **_Rhd2000EvalBoard_**
-1. Go to the BitFileName field and click on the (...). Next, a file browser pops up. Select the bit file you've downloaded. (In this example we used the rhd2000_usb3.bit renamed to main.bit).
+1. Go to the BitFileName field and click on the (...). Next, a file browser pops up. Select the bit file you've downloaded. In this example we used the rhd2000_usb3.bit renamed to main.bit.
 2. Set sampling frequency in the SampleRate field.
 
 ![image](https://user-images.githubusercontent.com/94412124/171454894-93697513-9513-4da6-b3c3-2d95dce306df.png)
 
+**_SelectChannels_**
+Type the channel numbers one by one that you are interested in. In this example, we selected 8 channels (2 channel from 4 mice).
+
+![image](https://user-images.githubusercontent.com/94412124/171457983-563d9cd9-575c-4def-a33e-f1084acd4376.png)
+
+**_Timer_**
+Set the DueTime property to the time when you would like to haver your data saved. In this example, we set DueTime to 1:00:00 and therefore data is saved in every hour.
+
+![image](https://user-images.githubusercontent.com/94412124/171460182-914ed102-94cc-42b9-898e-96b713e4d839.png)
+
+
+**_VideoWriter_**
+1. Make sure Buffered is set to True.
+2. Click on the (...) in the FileName property. In the pop-up browser, select the folder where you want to save your data. Specify file name as 'vid.avi'. **Having this specific file name is extremely important if the data will be analyzed in the Seizure Analysis GUI.** Note: don't forget to type the .avi extension, otherwise no video file will be generated.
+3. To ensure that each file has a unique name, set Suffix property. **Extremely important to set it to Timestamp if the data will be analyzed in our GUI.**
+ 
+![image](https://user-images.githubusercontent.com/94412124/171464450-905f8a88-88d9-4ded-ba1c-cbb027c815d6.png)
+
+Example of resulting video file name: 'vid2022-02-16T13_02_17.avi'
+
+**_MatrixWriter_**
+This step needs to be done twice - once for the timestamps, once for the amplifier data.
 
 *Extracting voltage and timestamp data from RHD2000EvalBoard node*
 
