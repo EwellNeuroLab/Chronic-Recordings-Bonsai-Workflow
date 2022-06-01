@@ -15,6 +15,13 @@ Packages can be downloaded in Tools -> Manage Packages
 An additional bit file must be provided to the OE acquisition node that is available here: https://github.com/open-ephys/GUI/tree/master/Resources/Bitfiles. Then, location of the bit file must be specified within the RHD2000EvalBoard node's properties (see Bonsai Property Settings/RHD2000EvalBoardProperty.png for details).
 
 ## Channel selection
+When channels are selected in Bonsai, the channel numbers needs to be converted from the Open Ephys channel map. With a 16-channels adapter board the following channel numbers are available.
+Port A: 8-23 (Open Ephys channel 1 = Bonsai channel 8, Open Ephys channel 16 = Bonsai channel 23)
+Port B: 40-55 (same as on Port A, but shifted with 32)
+Port C: 72-87 (same, shifted with 32)
+Port D: 104-119 (same, shifted with 32)
+
+When 32-channel amplifier or higher is used, no conversion is needed.
 
 ## Output file naming
 
