@@ -50,13 +50,16 @@ Bonsai nodes are parametrized by setting their properties in the Property panel.
 *Extracting voltage and timestamp data from RHD2000EvalBoard node*
 
 Right click on the RHD2000EvalBoard node. Select the first item in the list - Output. A list of data fields appears. Click on the AmplifierData/Timestamp to create nodes for the voltage/timestamp data.
+
 ![image](https://user-images.githubusercontent.com/94412124/171456707-badb6d05-7cf7-405e-8538-f2971eeee5d8.png)
 
 
 *Disabling auto-exposure* ()
 
-Go to the Property Panel of VideoCaptureDevice Click on the (...) in the CaptureProperties | (Collection) field. The following window pops-up. 
+Go to the Property Panel of VideoCaptureDevice Click on the (...) in the CaptureProperties | (Collection) field. The following window pops-up.
+
 ![image](https://user-images.githubusercontent.com/94412124/171451871-9f3b1e03-8a66-40bb-a838-ec3008bb2b4b.png)
+
 Exposure variable can be added by clicking on the Add button. Setting the ControlFlags to Manual and Value to -5 disables auto-exposure, maintaining a constan frame acqusition rate.
 
 
