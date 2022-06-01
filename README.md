@@ -32,3 +32,8 @@ Example for final file names with Timestamp suffix:
 'ts2022-02-16T13_02_17.bin'
 'amplifier2022-02-16T13_02_17.bin'
 'vid2022-02-16T13_02_17.avi'
+
+## Bonsai property settings
+
+![image](https://user-images.githubusercontent.com/94412124/171449218-e4c107af-69fc-49d3-8633-6a989563b79f.png)
+
