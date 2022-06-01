@@ -77,6 +77,25 @@ Example of resulting voltage file name: 'amplifier2022-02-16T13_02_17.bin'.
 
 ![image](https://user-images.githubusercontent.com/94412124/171470133-fc7fe75a-2445-41d1-bbf0-e568822ac92e.png)
 
+### LFP visualization
+Bonsai has built-in modules to visualize data streams. For LFP visualization, after recording was started, right-click on the SelectChannels node and select Show Visualizer -> Bonsai.Dsp.Design.MatVisualizer.  Right-click on the LFP display window and a settings bar will appear in the bottom of the window:
+
+![image](https://user-images.githubusercontent.com/94412124/171476116-aa490dc5-5d95-4767-8467-977e82f8cb57.png)
+
+Scale X: in this example is set to 0-2000. Since our sampling rate was 2000 Hz, this corresponds that 1 s of data is displayed before refreshing the window.
+Scale Y: in this example is set to 25000-45000. Voltage data is not converted into uV yet, but it's encoded in 16-bit unsigned integer, meaning that voltage values vary between 0-2^16. On this scale, 0 uV is in the middle of this range (2^16/2 = 32768). Therefore we adjusted Y scale that it is approximately centered to 0.
+Grid: layout of the channels - display individual channels on the same axis (overlap) or on different axis (no overlap). We set it to different axis.
+Additional settings are available by clicking on the arrow in the right corner.
+
+![image](https://user-images.githubusercontent.com/94412124/171477518-af3c3894-99fa-47c7-872e-8bd6bfbfa083.png)
+
+History Length: # of data packets to display. One packet contains 256 sample point. Therefore, to fill out 1 s (2000 sample point), we set this parameter to 8 (8*256 = 2048).
+
+Channel Offset: When user set layout that the channels are displayed on the same axis, this parameter ensures that the channels can be distinguished (offsets each channel vertically). We didn't use this as we displayed each channel on separate axis. 
+
+Channels per page: # of channels displayed on one webpage. 
+
+
 ### Advanced settings
 
 The following settings are listed for the sake of completeness. The user is not required to change on these settings but may give a full insight how the workflow works.
