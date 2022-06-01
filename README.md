@@ -21,7 +21,7 @@ Port B: 40-55 (same as on Port A, but shifted with 32)
 Port C: 72-87 (same, shifted with 32)
 Port D: 104-119 (same, shifted with 32)
 
-When 32-channel amplifier or higher is used, no conversion is needed.
+When 32 channels or higher are used, no conversion is needed (tested with 64-channel amplifier).
 
 ## Output file naming
 
