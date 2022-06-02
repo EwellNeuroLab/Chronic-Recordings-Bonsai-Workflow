@@ -16,9 +16,13 @@ An additional bit file must be provided to the OE acquisition node that is avail
 
 ## Channel selection
 When channels are selected in Bonsai, the channel numbers are needed to be converted from the Open Ephys channel map. With a 16-channels adapter board the following channel numbers are available.
+
 Port A: 8-23 (Open Ephys channel 1 = Bonsai channel 8, Open Ephys channel 16 = Bonsai channel 23)
+
 Port B: 40-55 (same as on Port A, but shifted with 32)
+
 Port C: 72-87 (same, shifted with 32)
+
 Port D: 104-119 (same, shifted with 32)
 
 When 32 channels or higher are used, no conversion is needed (tested with 64-channel amplifier).
