@@ -15,7 +15,7 @@ Packages can be downloaded in Tools -> Manage Packages
 An additional bit file must be provided to the OE acquisition node that is available here: https://github.com/open-ephys/GUI/tree/master/Resources/Bitfiles. Then, location of the bit file must be specified within the RHD2000EvalBoard node's properties (see Bonsai property settings section).
 
 ## Channel selection
-When channels are selected in Bonsai, the channel numbers needs to be converted from the Open Ephys channel map. With a 16-channels adapter board the following channel numbers are available.
+When channels are selected in Bonsai, the channel numbers are needed to be converted from the Open Ephys channel map. With a 16-channels adapter board the following channel numbers are available.
 Port A: 8-23 (Open Ephys channel 1 = Bonsai channel 8, Open Ephys channel 16 = Bonsai channel 23)
 Port B: 40-55 (same as on Port A, but shifted with 32)
 Port C: 72-87 (same, shifted with 32)
@@ -29,15 +29,16 @@ When the Seizure Analysis GUI is used to analyze data, extremely important to se
 
 
 ## Bonsai property settings
-Bonsai nodes are parametrized by setting their properties in the Property panel. Many of the settings are fixed and do not require to be changed, but some of them requires modifications by the user. First, settings that requires these nodes are listed. 
+Bonsai nodes are parametrized by setting their properties in the Property panel. Many of the settings are fixed and do not require to be changed, but some of them requires modifications by the user. 
 
 **_VideoCaptureDevice_**
-*Set this when more than one camera is connected to the computer.* Cameras will be listed here and user have to select the one to use for video acquisition. In this example, we only had one camera connected (labelled with index 0).
+
+*Set this when more than one camera is connected to the computer.* Cameras will be listed in the Index field and user has to select the one to use for video acquisition. In this example, we only had one camera connected (labelled with index 0).
 
 ![image](https://user-images.githubusercontent.com/94412124/171449218-e4c107af-69fc-49d3-8633-6a989563b79f.png)
 
 **_Rhd2000EvalBoard_**
-1. Go to the BitFileName field and click on the (...). Next, a file browser pops up. Select the bit file you've downloaded. In this example we used the rhd2000_usb3.bit renamed to main.bit.
+1. Go to the BitFileName field and click on the (...). Next, a file browser pops up. Select the bit file you've downloaded. In this example we used the rhd2000_usb3.bit, renamed as main.bit.
 2. Set sampling frequency in the SampleRate field.
 
 ![image](https://user-images.githubusercontent.com/94412124/171454894-93697513-9513-4da6-b3c3-2d95dce306df.png)
