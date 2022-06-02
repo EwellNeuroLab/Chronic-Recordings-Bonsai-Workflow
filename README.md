@@ -98,7 +98,7 @@ History Length: # of data packets to display. One packet contains 256 sample poi
 
 Channel Offset: When user set layout that the channels are displayed on the same axis, this parameter ensures that the channels can be distinguished (offsets each channel vertically). We didn't use this as we displayed each channel on separate axis. 
 
-Channels per page: # of channels displayed on one webpage. 
+Channels per page: # of channels displayed in one window. 
 
 
 ### Advanced settings
