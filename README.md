@@ -46,6 +46,7 @@ Bonsai nodes are parametrized by setting their properties in the Property panel.
 **_Rhd2000EvalBoard_**
 1. Go to the BitFileName field and click on the (...). Next, a file browser pops up. Select the bit file you've downloaded. In this example we used the rhd2000_usb3.bit, renamed as main.bit.
 2. Set sampling frequency in the SampleRate field.
+3. Set upper bandwidth (should be less than half of the sampling rate).
 
 ![image](https://user-images.githubusercontent.com/94412124/179416993-27ee8af9-e212-405d-ba27-52506436ca52.png)
 
