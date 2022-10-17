@@ -1,6 +1,6 @@
 # Chronic-Recordings-Bonsai-Workflow
 
-### If you use this code, please cite https://doi.org/10.1101/2022.07.14.500102
+### If you use this code, please cite https://www.eneuro.org/content/eneuro/9/5/ENEURO.0283-22.2022.full.pdf
 
 Bonsai workflows for video-LFP recordings with webcamera and OpenEphys acquisition box. 
 * BasicVideoLFPRecordings: video and LFP data are acquired, synchronized and saved when the workflow is stopped. Suitable for short experiments.
